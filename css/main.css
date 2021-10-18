@@ -328,7 +328,7 @@
 }
 
 .projects__item:hover::after {
-  top: 0;
+  top: 30px;
   opacity: 0.9;
 }
 
