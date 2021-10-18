@@ -32,7 +32,7 @@
 }
 
 .menu-btn {
-  position: absolute;
+  position: fixed;
   z-index: 1;
   right: 1rem;
   top: 1rem;
@@ -328,7 +328,7 @@
 }
 
 .projects__item:hover::after {
-  top: 30px;
+  top: 0;
   opacity: 0.9;
 }
 
