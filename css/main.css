@@ -5,6 +5,99 @@
   padding: 0;
 }
 
+.top {
+  -webkit-animation: toptop 1.5s ease-in-out;
+  -moz-animation: toptop 1.5s ease-in-out;
+  -ms-animation: toptop 1.5s ease-in-out;
+}
+
+.right {
+  -webkit-animation: rightright 1.5s ease-in-out;
+  -moz-animation: rightright 1.5s ease-in-out;
+  -ms-animation: rightright 1.5s ease-in-out;
+}
+
+.left {
+  -webkit-animation: leftleft 1.5s ease-in-out;
+  -moz-animation: leftleft 1.5s ease-in-out;
+  -ms-animation: leftleft 1.5s ease-in-out;
+}
+
+.bottom {
+  -webkit-animation: bottombottom 1.5s ease-in-out;
+  -moz-animation: bottombottom 1.5s ease-in-out;
+  -ms-animation: bottombottom 1.5s ease-in-out;
+}
+
+.copyrajt {
+  -webkit-animation: kopyrajt 1.5s ease-in-out;
+  -moz-animation: kopyrajt 1.5s ease-in-out;
+  -ms-animation: kopyrajt 1.5s ease-in-out;
+}
+
+.vetsi {
+  -webkit-animation: vetsivetsi 1.5s ease-in-out;
+  -moz-animation: vetsivetsi 1.5s ease-in-out;
+  -ms-animation: vetsivetsi 1.5s ease-in-out;
+}
+
+@keyframes toptop {
+  0% {
+    transform: translateY(-1000%);
+  }
+  100%{
+    transform: translateX(0);
+  }
+}
+
+@keyframes rightright {
+  0% {
+    transform: translateX(1000%);
+  }
+  100% {
+    transform: translateX(O);
+  }
+  
+}
+
+@keyframes leftleft {
+  0% {
+    transform: translatex(-100%);
+  }
+  100% {
+    transform: translateX(O);
+  }
+  
+}
+
+@keyframes bottombottom {
+  0% {
+    transform: translateY(1000%);
+  }
+  100% {
+    transform: translateX(O);
+  }
+  
+}
+
+@keyframes kopyrajt {
+  0% {
+    transform: rotate(720deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes vetsivetsi {
+  0% {
+    transform: scale(0.3);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
 .home {
   height: 100%;
   padding-top: 40vh;
@@ -33,7 +126,7 @@
 
 .menu-btn {
   position: fixed;
-  z-index: 2;
+  z-index: 3;
   right: 1rem;
   top: 1rem;
   height: 20px;
@@ -305,6 +398,7 @@
 }
 
 .uprava{
+  z-index: 0;
 }
 
 .projects__item {
@@ -312,6 +406,17 @@
   border-bottom: 5px solid #ff652f;
   overflow: hidden;
   cursor: pointer;
+}
+
+.projects__item::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.38;
+  background-image: linear-gradient(to right bottom, #e9e916, #ff9012, #f32d4f, #a90078, #0d1883);
 }
 
 .projects__item img {
@@ -423,6 +528,7 @@
   background-color: #272727;
   padding: 25px;
 }
+
   .menu-btn {
     visibility: hidden;
   }
@@ -541,5 +647,10 @@ footer {
   text-align: right;
   padding: 1rem;
   color: #fff;
+}
 
-/*# sourceMappingURL=main.css.map */
+@media screen and (max-width: 768px) {
+  .hore {
+    position: relative;
+    top:-180px;
+  }
